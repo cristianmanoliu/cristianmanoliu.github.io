@@ -35,7 +35,7 @@ Vertical order:
 1. **Name** — `Cristian Manoliu` — `<h1>`, ~2.5rem, semi-bold (600)
 2. **Tagline** — `Senior Software Engineer · High-Performance Distributed Systems` — `<p>`, ~1rem, muted color
 3. **Bio** — full bio paragraph (`<p>`), comfortable line-height (1.6), normal weight
-4. **Links row** — horizontal `<nav>` with three text links separated by a small bullet `·` or by spacing: `GitHub`, `LinkedIn`, `Email`
+4. **Links row** — horizontal `<nav>` with three text links separated by a small middle-dot `·` (rendered in muted color, with `~0.75rem` horizontal margin on each side): `GitHub`, `LinkedIn`, `Email`
 5. **Footer** — small (`<footer>`), very muted: `© 2026 Cristian Manoliu`
 
 ### Content (final)
