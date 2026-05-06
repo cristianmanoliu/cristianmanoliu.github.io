@@ -5,12 +5,15 @@
   padding: 0;
 }
 
-/* Theme tokens (light mode default) */
+/* Theme tokens (always dark — Matrix theme) */
 :root {
-  --bg: #fafafa;
-  --fg: #111111;
-  --muted: #666666;
-  --accent: #2563eb;
+  --bg: #0a0a0a;
+  --fg: #eaeaea;
+  --muted: #9a9a9a;
+  --accent: #00ff66;
+  --card-bg: rgba(10, 12, 10, 0.62);
+  --card-border: rgba(0, 255, 102, 0.18);
+  --overlay: rgba(0, 0, 0, 0.55);
 }
 
 /* Base */
@@ -20,8 +23,15 @@ html {
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  background: var(--bg);
   color: var(--fg);
+  background-color: var(--bg);
+  background-image:
+    linear-gradient(var(--overlay), var(--overlay)),
+    url("matrix-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   min-height: 100vh;
@@ -31,24 +41,54 @@ body {
   padding: 2rem;
 }
 
-/* Layout */
+/* Layout — content card over the matrix */
 main {
   max-width: 640px;
   width: 100%;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 2.5rem;
+  backdrop-filter: blur(10px) saturate(140%);
+  -webkit-backdrop-filter: blur(10px) saturate(140%);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+}
+
+/* Profile header — avatar + name side by side */
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.75rem;
+}
+
+.avatar {
+  flex-shrink: 0;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--accent);
+  box-shadow: 0 0 0 4px rgba(0, 255, 102, 0.12), 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.name-block {
+  min-width: 0;
 }
 
 /* Typography */
 h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 600;
   letter-spacing: -0.02em;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.35rem;
+  line-height: 1.15;
 }
 
 .tagline {
   color: var(--muted);
-  font-size: 1rem;
-  margin-bottom: 2rem;
+  font-size: 0.95rem;
+  line-height: 1.4;
 }
 
 .bio {
@@ -59,7 +99,7 @@ h1 {
 
 /* Links row */
 .links {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .links a {
@@ -85,32 +125,36 @@ footer {
   font-size: 0.85rem;
 }
 
-/* Dark mode (auto via OS setting) */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #0f0f10;
-    --fg: #eaeaea;
-    --muted: #888888;
-    /* --accent stays the same blue */
-  }
-}
-
 /* Mobile */
 @media (max-width: 480px) {
   body {
     padding: 1.25rem;
+    /* fixed backgrounds can stutter on mobile — use scroll */
+    background-attachment: scroll;
+  }
+  main {
+    padding: 1.75rem;
+    border-radius: 10px;
+  }
+  .profile {
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .avatar {
+    width: 88px;
+    height: 88px;
   }
   h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   .tagline {
-    margin-bottom: 1.5rem;
+    font-size: 0.85rem;
   }
   .bio {
     margin-bottom: 1.5rem;
   }
   .links {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
   }
   .links .sep {
     margin: 0 0.5rem;
