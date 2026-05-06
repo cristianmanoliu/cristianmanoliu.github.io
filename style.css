@@ -84,3 +84,35 @@ footer {
   color: var(--muted);
   font-size: 0.85rem;
 }
+
+/* Dark mode (auto via OS setting) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f0f10;
+    --fg: #eaeaea;
+    --muted: #888888;
+    /* --accent stays the same blue */
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  body {
+    padding: 1.25rem;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  .tagline {
+    margin-bottom: 1.5rem;
+  }
+  .bio {
+    margin-bottom: 1.5rem;
+  }
+  .links {
+    margin-bottom: 2rem;
+  }
+  .links .sep {
+    margin: 0 0.5rem;
+  }
+}
