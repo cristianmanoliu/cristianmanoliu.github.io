@@ -7,7 +7,7 @@ A minimal one-page personal presentation site for Cristian Manoliu, hosted on Gi
 ## Repository & Deployment
 
 - **Repo name:** `cristianmanoliu.github.io` (GitHub's "user site" convention — content at root auto-deploys to `https://cristianmanoliu.github.io`)
-- **Local path:** `/Users/cristianmanoliu/Main/source.code/github/cristianmanoliu.github.io`
+- **Local path:** `/Users/cristianmanoliu/Main/code/active/cristianmanoliu.github.io`
 - **Branch:** `main` (default GitHub Pages source for user sites)
 - **No build step** — pure static HTML + CSS, served as-is
 - **Custom domain:** out of scope for v1 (can be added later via `CNAME` file)

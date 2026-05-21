@@ -14,7 +14,7 @@
 
 ## File Structure
 
-Working directory: `/Users/cristianmanoliu/Main/source.code/github/cristianmanoliu.github.io`
+Working directory: `/Users/cristianmanoliu/Main/code/active/cristianmanoliu.github.io`
 
 ```
 cristianmanoliu.github.io/
@@ -41,7 +41,7 @@ Each file has one responsibility. No partials, no shared state. The repo is git-
 
 - [ ] **Step 1: Create `.gitignore`**
 
-Write this file at `/Users/cristianmanoliu/Main/source.code/github/cristianmanoliu.github.io/.gitignore`:
+Write this file at `/Users/cristianmanoliu/Main/code/active/cristianmanoliu.github.io/.gitignore`:
 
 ```
 # macOS
@@ -58,7 +58,7 @@ Thumbs.db
 
 - [ ] **Step 2: Create `README.md`**
 
-Write this file at `/Users/cristianmanoliu/Main/source.code/github/cristianmanoliu.github.io/README.md`:
+Write this file at `/Users/cristianmanoliu/Main/code/active/cristianmanoliu.github.io/README.md`:
 
 ```markdown
 # cristianmanoliu.github.io
@@ -83,7 +83,7 @@ Pushes to `main` are auto-deployed by GitHub Pages.
 
 - [ ] **Step 3: Create `LICENSE` (MIT)**
 
-Write this file at `/Users/cristianmanoliu/Main/source.code/github/cristianmanoliu.github.io/LICENSE`:
+Write this file at `/Users/cristianmanoliu/Main/code/active/cristianmanoliu.github.io/LICENSE`:
 
 ```
 MIT License
@@ -111,7 +111,7 @@ SOFTWARE.
 
 - [ ] **Step 4: Verify files exist**
 
-Run from `/Users/cristianmanoliu/Main/source.code/github/cristianmanoliu.github.io`:
+Run from `/Users/cristianmanoliu/Main/code/active/cristianmanoliu.github.io`:
 
 ```bash
 ls -1 .gitignore README.md LICENSE
@@ -140,7 +140,7 @@ git commit -m "chore: add gitignore, README, and MIT license"
 
 - [ ] **Step 1: Write `index.html`**
 
-Write this file at `/Users/cristianmanoliu/Main/source.code/github/cristianmanoliu.github.io/index.html`:
+Write this file at `/Users/cristianmanoliu/Main/code/active/cristianmanoliu.github.io/index.html`:
 
 ```html
 <!DOCTYPE html>
@@ -181,7 +181,7 @@ Write this file at `/Users/cristianmanoliu/Main/source.code/github/cristianmanol
 Open the file:
 
 ```bash
-open /Users/cristianmanoliu/Main/source.code/github/cristianmanoliu.github.io/index.html
+open /Users/cristianmanoliu/Main/code/active/cristianmanoliu.github.io/index.html
 ```
 
 Expected: page renders with unstyled content — name as a large heading (browser default), tagline + bio as paragraphs, three links separated by `·`, and the footer line. Links should be clickable. Page will look plain because `style.css` doesn't exist yet — that's expected; the file is created in Task 3.
@@ -214,7 +214,7 @@ git commit -m "feat: add index.html with semantic markup"
 
 - [ ] **Step 1: Write the base stylesheet**
 
-Write this file at `/Users/cristianmanoliu/Main/source.code/github/cristianmanoliu.github.io/style.css`:
+Write this file at `/Users/cristianmanoliu/Main/code/active/cristianmanoliu.github.io/style.css`:
 
 ```css
 /* Reset */
@@ -407,7 +407,7 @@ git commit -m "feat: add dark mode and mobile responsive rules"
 
 - [ ] **Step 1: Write the favicon**
 
-Write this file at `/Users/cristianmanoliu/Main/source.code/github/cristianmanoliu.github.io/favicon.svg`:
+Write this file at `/Users/cristianmanoliu/Main/code/active/cristianmanoliu.github.io/favicon.svg`:
 
 ```xml
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
@@ -425,7 +425,7 @@ Write this file at `/Users/cristianmanoliu/Main/source.code/github/cristianmanol
 
 Reload `index.html`. Expected: the browser tab shows a small blue `CM` icon. (On some browsers you may need a hard reload — Cmd+Shift+R — to refresh the favicon cache.)
 
-Also open `favicon.svg` directly: `open /Users/cristianmanoliu/Main/source.code/github/cristianmanoliu.github.io/favicon.svg`. Expected: a square showing "CM" in blue, centered.
+Also open `favicon.svg` directly: `open /Users/cristianmanoliu/Main/code/active/cristianmanoliu.github.io/favicon.svg`. Expected: a square showing "CM" in blue, centered.
 
 - [ ] **Step 3: Commit**
 
@@ -444,7 +444,7 @@ This task confirms the spec's success criteria are met before pushing to GitHub.
 
 - [ ] **Step 1: Local preview via http server**
 
-From `/Users/cristianmanoliu/Main/source.code/github/cristianmanoliu.github.io`, run:
+From `/Users/cristianmanoliu/Main/code/active/cristianmanoliu.github.io`, run:
 
 ```bash
 python3 -m http.server 8000
@@ -511,7 +511,7 @@ If not authenticated, the engineer should run `gh auth login` in their own termi
 
 - [ ] **Step 2: Create the public GitHub repo**
 
-From `/Users/cristianmanoliu/Main/source.code/github/cristianmanoliu.github.io`, run:
+From `/Users/cristianmanoliu/Main/code/active/cristianmanoliu.github.io`, run:
 
 ```bash
 gh repo create cristianmanoliu.github.io \
